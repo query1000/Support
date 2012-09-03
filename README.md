@@ -1,0 +1,79 @@
+サポート
+======
+
+コマンド履歴
+----------
+
+* 本文中で長くて手入力しづらいコマンドの履歴です。
+
+###07-05
+
+    $ git log --graph --all --format="%x09%an%x09%h %d %s"
+
+    $ git help log
+    /The placeholders are:
+
+    $ git log --graph --all --format="%x09%C(cyan bold)%an%Creset%x09%C(yellow)%h%Cr eset %C(magenta reverse)%d%Creset %s"
+
+    $ git config --global alias.tree 'log --graph --all --format="%x09%C( cyan bold)%an%Creset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Cre set %s"'
+
+    $ alias tree='git log --graph --all --format="%x09%C(cyan bold)%an%Cr eset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s"'
+
+###11-07
+
+    alice$ cp -r ../project ../project.back
+
+    alice$ git filter-branch --env-filter 'GIT_AUTHOR_EMAIL="alice@gitma il.com"' -- --all
+
+    alice$ git log --pretty=short
+
+    alice$ git filter-branch --commit-filter '
+    if [ "$GIT_AUTHOR_EMAIL" = "alice@example.com" ];
+    then
+    GIT_AUTHOR_EMAIL="alice@gitmail.com";
+    git commit-tree "$@";
+    else
+    git commit-tree "$@";
+    fi' -- --all
+
+    alice$ git log --oneline --all
+
+    alice$ git log --oneline --all --decorate
+
+    alice$ git reset --hard refs/original/refs/heads/master
+
+    alice$ git log --oneline --decorate
+
+    alice$ git filter-branch --commit-filter '
+    if [ "$GIT_AUTHOR_EMAIL" = "bob@example.com" ];
+    then
+    GIT_AUTHOR_EMAIL="bob@gitmail.com";
+    git commit-tree "$@";
+    else
+    git commit-tree "$@";
+    fi' -- --all
+
+    alice$ git filter-branch -f --commit-filter '
+    if [ "$GIT_AUTHOR_EMAIL" = "bob@example.com" ];
+    then
+    GIT_AUTHOR_EMAIL="bob@gitmail.com";
+    git commit-tree "$@";
+    else    
+    git commit-tree "$@";
+    fi' -- --all
+
+    alice$ git filter-branch --original refs/original_bob --commit-filter '
+    if [ "$GIT_AUTHOR_EMAIL" = "bob@example.com" ];
+    then
+    GIT_AUTHOR_EMAIL="bob@gitmail.com";
+    git commit-tree "$@";
+    else
+    git commit-tree "$@";
+    fi' -- --all
+
+    $ git for-each-ref --format="%(refname)" refs/original/ | xargs -n 1 git update-ref -d
+
+    $ paths=`git for-each-ref --format="%(refname)" refs/original/`
+    $ for path in $paths; do git update-ref "${path#refs/original/}" `cat ".git/${path}"`; done
+
+    $ git for-each-ref --format="%(refname)" refs/original/
