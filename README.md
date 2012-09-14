@@ -1,6 +1,15 @@
 サポート
 ======
 
+正誤表
+------
+
+###13ページ 6行目 コミットID
+（誤）bob-MacBook:demo bob$ git checkout __9de473b__ sample.txt
+
+（正）bob-MacBook:demo bob$ git checkout __d7a8064__ sample.txt
+
+
 コマンド履歴
 ----------
 
