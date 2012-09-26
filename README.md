@@ -4,10 +4,28 @@
 正誤リスト
 ----------
 
-###13ページ 6行目 コミットID
+###13ページ 上から6行目 コミットID
 （誤）bob-MacBook:demo bob$ git checkout __9de473b__ sample.txt
 
 （正）bob-MacBook:demo bob$ git checkout __d7a8064__ sample.txt
+
+
+###54ページ 下から9行目
+（誤）試しに__ファイル名変更前に戻して__、git mvでやってみるね。
+
+（正）試しに、git mvでやってみるね。
+
+
+###54ページ 下から2行目 末尾の記号
+（誤）alice$ git reset --hard HEAD__￣__
+
+（正）alice$ git reset --hard HEAD__~__
+
+
+###55ページ 上から19行目 末尾の記号
+（誤）alice$ git reset --hard HEAD__￣__
+
+（正）alice$ git reset --hard HEAD__~__
 
 
 コマンド履歴
