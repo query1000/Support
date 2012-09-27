@@ -28,6 +28,12 @@
 （正）alice$ git reset --hard HEAD__~__
 
 
+###170ページ 下から5行目
+（誤）Delete tag 'Version-0.1' (was 9ea7a9a)
+
+（正）Delete tag 'v0.1' (was d091ea1)
+
+
 コマンド履歴
 ------------
 
