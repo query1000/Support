@@ -25,6 +25,7 @@ $ git status
 
 * リポジトリごとに`git config --local core.precomposeunicode true`の設定が必要になります。
 * Git 1.7.12.1でgit initすると、リポジトリのデフォルトは以下の設定になっています。
+
 ```
 $ git config --local -l
 core.repositoryformatversion=0
