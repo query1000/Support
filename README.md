@@ -28,6 +28,12 @@
 （正）alice$ git reset --hard HEAD__~__
 
 
+###141ページ 上から11行目 コマンド出力
+（誤）*   Bob   a73c7ab 式展開をするためダブルクォートへ変更
+
+（正）*   Bob   a73c7ab __(origin/master, origin/HEAD)__式展開をするためダブルクォートへ変更
+
+
 ###170ページ 下から5行目
 （誤）Delete tag 'Version-0.1' (was 9ea7a9a)
 
