@@ -93,6 +93,13 @@
 （正）`>> require './what_is_git'`
 
 
+###141ページ 上から11行目
+
+（誤）* Bob a73c7ab 式展開をするためダブルクォートへ変更
+
+（正）* Bob a73c7ab __(origin/master, origin/HEAD)__式展開をするためダブルクォートへ変更
+
+
 ###170ページ 下から5行目
 （誤）Delete tag '__Version-0.1__' (was __9ea7a9a__)
 
