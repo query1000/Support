@@ -81,18 +81,6 @@
 （正）ほら、最新のコミット＝HEADが「__6a4f43a__ "showメソッドのメッセージを修正"」
 
 
-###111ページ 上から13行目 Ruby1.9.2以降の対応のため
-（誤）`>> require 'what_is_git'`
-
-（正）`>> require './what_is_git'`
-
-
-###120ページ 下から15行目 Ruby1.9.2以降の対応のため
-（誤）`>> require 'what_is_git'`
-
-（正）`>> require './what_is_git'`
-
-
 ###141ページ 上から11行目
 
 （誤）* Bob a73c7ab 式展開をするためダブルクォートへ変更
@@ -158,6 +146,38 @@ alice$ git tree
 （誤）git verify-pack -v .__G__it/objects/pack/pack-of414439f64f968085208425de4
 
 （正）git verify-pack -v .__g__it/objects/pack/pack-of414439f64f968085208425de4
+
+
+Ruby 1.9.x、2.0.xへの対応
+-------------------------
+
+###111ページ 上から13行目 ./を追記
+（誤）`>> require 'what_is_git'`
+
+（正）`>> require './what_is_git'`
+
+
+###120ページ 下から15行目 ./を追記
+（誤）`>> require 'what_is_git'`
+
+（正）`>> require './what_is_git'`
+
+
+###184ページ 下から1〜10行目
+* Ruby 1.9.x、2.0.xでは、以下の手順は不要です。（Ruby 1.8.xでは必要です）
+
+````
+alice$ vi what_is_git.rb
+# 次の差分となるように修正します。
+alice$ git diff
+〔中略〕
++require 'jcode'
++$KCODE = 'u'
++
+ class WhatIsGit
+   def about(lang = 'en')
+     puts "http://#{lang}.wikipedia.org/wiki/Git"
+````
 
 
 コマンド履歴
