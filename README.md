@@ -166,6 +166,7 @@ alice$ git tree
 * 本文中で長くて手入力しづらいコマンドの履歴です。
 
 ###07-05
+
 ````
 $ git log --graph --all --format="%x09%an%x09%h %d %s"
 ````
@@ -182,7 +183,9 @@ $ git config --global alias.tree 'log --graph --all --format="%x09%C( cyan bold)
 ````
 $ alias tree='git log --graph --all --format="%x09%C(cyan bold)%an%Cr eset%x09%C(yellow)%h%Creset %C(magenta reverse)%d%Creset %s"'
 ````
+
 ###11-07
+
 ````
 alice$ cp -r ../project ../project.back
 ````
@@ -253,4 +256,10 @@ $ for path in $paths; do git update-ref "${path#refs/original/}" `cat ".git/${pa
 ````
 ````
 $ git for-each-ref --format="%(refname)" refs/original/
+````
+
+###13-11 248ページ 下から3〜5行目
+
+````
+alice@alice-MacBook:~/project (master)$ PS1='\[\033[40;1;32m\]\u\[\033[2;32m\]@\[\033[0m\]\[\033[40;32m\]\h:\[\033[1;36m\]\w\[\033[0m\]\n$(__git_ps1 "(%s)")\$ '
 ````
