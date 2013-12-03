@@ -33,16 +33,16 @@
 （正）試しに、git mvでやってみるね。
 
 
-###54ページ 下から1行目 コミットID
-（誤）HEAD is now at __7b9b252__ ファイル名変更
-
-（正）HEAD is now at __e2ec12d__ ファイル名変更
-
-
 ###54ページ 下から2行目 末尾の記号
 （誤）alice$ git reset --hard HEAD￣
 
 （正）alice$ git reset --hard HEAD~
+
+
+###54ページ 下から1行目 コミットID
+（誤）HEAD is now at __7b9b252__ ファイル名変更
+
+（正）HEAD is now at __e2ec12d__ ファイル名変更
 
 
 ###55ページ 上から19行目 末尾の記号
@@ -97,19 +97,19 @@
 ###186ページ 下から1〜5行目
 （誤）
 ````
-*   Alice 7eab4a3 (master)対話の返答で日本語全角文字にも対応
-| * Alice 8c71190 (HEAD, next)languageメソッドを追加
-| * Alice f7af777 実行環境に合わせてデフォルト言語を設定する
+*       Alice   7eab4a3 (master)対話の返答で日本語全角文字にも対応
+| *     Alice   8c71190 (HEAD, next)languageメソッドを追加
+| *     Alice   f7af777 実行環境に合わせてデフォルト言語を設定する
 |/
-*   Alice b821e92 (v0.1)Merge branch 'master' of /Users/alice/Public/project
+*       Alice   b821e92 (v0.1)Merge branch 'master' of /Users/alice/Public/project
 ````
 （正）
 ````
-*   Alice 934f5cd (master)対話の返答で日本語全角文字にも対応
-| * Alice 07c6f25 (HEAD, next)languageメソッドを追加
-| * Alice d819640 実行環境に合わせてデフォルト言語を設定する
+*       Alice   934f5cd (master)対話の返答で日本語全角文字にも対応
+| *     Alice   07c6f25 (HEAD, next)languageメソッドを追加
+| *     Alice   d819640 実行環境に合わせてデフォルト言語を設定する
 |/
-*   Alice d091ea1 (v0.1)Merge remote-tracking branch 'origin/master'
+*       Alice   d091ea1 (v0.1)Merge remote-tracking branch 'origin/master'
 ````
 
 
@@ -117,28 +117,28 @@
 （誤）
 ````
 alice$ git tree
-*   Alice ce3fb50 (refs/stash)On next: 言語環境を取得する作業中
+*       Alice   ce3fb50 (refs/stash)On next: 言語環境を取得する作業中
 |\
-| * Alice 260e6ee index on next: 8c71190 languageメソッドを追加
+| *     Alice   260e6ee index on next: 8c71190 languageメソッドを追加
 |/
-*   Alice 8c71190 (HEAD, next)languageメソッドを追加
-*   Alice f7af777 実行環境に合わせてデフォルト言語を設定する
-| * Alice 7eab4a3 (master)対話の返答で日本語全角文字にも対応
+*       Alice   8c71190 (HEAD, next)languageメソッドを追加
+*       Alice   f7af777 実行環境に合わせてデフォルト言語を設定する
+| *     Alice   7eab4a3 (master)対話の返答で日本語全角文字にも対応
 |/
-*   Alice b821e92 (v0.1)Merge branch 'master' of /Users/alice/Public/project
+*       Alice   b821e92 (v0.1)Merge branch 'master' of /Users/alice/Public/project
 ````
 （正）
 ````
 alice$ git tree
-*   Alice ce3fb50 (refs/stash)On next: 言語環境を取得する作業中
+*       Alice   ce3fb50 (refs/stash)On next: 言語環境を取得する作業中
 |\
-| * Alice 260e6ee index on next: 07c6f25 languageメソッドを追加
+| *     Alice   260e6ee index on next: 07c6f25 languageメソッドを追加
 |/
-*   Alice 07c6f25 (HEAD, next)languageメソッドを追加
-*   Alice d819640 実行環境に合わせてデフォルト言語を設定する
-| * Alice 934f5cd (master)対話の返答で日本語全角文字にも対応
+*       Alice   07c6f25 (HEAD, next)languageメソッドを追加
+*       Alice   d819640 実行環境に合わせてデフォルト言語を設定する
+| *     Alice   934f5cd (master)対話の返答で日本語全角文字にも対応
 |/
-*   Alice d091ea1 (v0.1)Merge remote-tracking branch 'origin/master'
+*       Alice   d091ea1 (v0.1)Merge remote-tracking branch 'origin/master'
 ````
 
 
